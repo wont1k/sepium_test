@@ -1,0 +1,160 @@
+
+    html, body {
+        min-height: 100%;
+    }
+    body, div, form, input, select, p { 
+        padding: 0;
+        margin: 0;
+        outline: none;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: #666;
+    }
+        h1 {
+        margin: 0;
+        font-weight: 400;
+        }
+        .main-block, .log-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        }
+        form {
+        width: 100%;
+        padding: 20px;
+        }
+        fieldset {
+        border: none;
+        border-top: 1px solid #8ebf42;
+        }
+        .account-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+        .account-check{
+          display: flex;
+          flex-wrap: wrap;
+          }
+        .account-details, .account-check  >div >div >div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        }
+        .account-details >div>div, input, label {
+        width: 100%;
+        }
+        
+        .account-check >div>div, input, label {
+          width: 50%;
+          }
+        label {
+        padding: 0 5px;
+        text-align: right;
+        vertical-align: middle;
+        }
+        input {
+        padding: 5px;
+        vertical-align: middle;
+        }
+        button {
+        width: 100%;
+        padding: 10px 0;
+        margin: 10px auto;
+        border-radius: 5px; 
+        border: none;
+        background: #8ebf42; 
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        }
+        button:hover {
+        background: #82b534;
+        }
+        @media (min-width: 568px) {
+        .account-details >div, .personal-details >div {
+        width: 30%;
+        }
+
+        table {
+          border: 1px solid #ccc;
+          border-collapse: collapse;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          table-layout: fixed;
+        }
+
+        table caption {
+          font-size: 1.5em;
+          margin: .5em 0 .75em;
+        }
+
+        table tr {
+          background-color: #f8f8f8;
+          border: 1px solid #ddd;
+          padding: .35em;
+        }
+
+        table th,
+        table td {
+          padding: .625em;
+          text-align: center;
+        }
+
+        table th {
+          font-size: .85em;
+          letter-spacing: .1em;
+          text-transform: uppercase;
+        }
+
+        @media screen and (max-width: 600px) {
+          table {
+            border: 0;
+          }
+
+          table caption {
+            font-size: 1.3em;
+          }
+          
+          table thead {
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+          }
+          
+          table tr {
+            border-bottom: 3px solid #ddd;
+            display: block;
+            margin-bottom: .625em;
+          }
+          
+          table td {
+            border-bottom: 1px solid #ddd;
+            display: block;
+            font-size: .8em;
+            text-align: right;
+          }
+          
+          table td::before {
+            /*
+            * aria-label has no advantage, it won't be read inside a table
+            content: attr(aria-label);
+            */
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+          
+          table td:last-child {
+            border-bottom: 0;
+          }
+        }
+      }
